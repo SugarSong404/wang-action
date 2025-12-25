@@ -1,0 +1,175 @@
+.up_view{
+  z-index: 2;
+  width: 750rpx; 
+  height: 260rpx;
+  position:fixed;
+  left: 0;
+  top: 0;
+}
+.add_btn{
+  width: 125rpx; 
+  height: 90rpx; 
+  top: 160rpx; 
+  right: 0;
+  position: absolute; 
+  background-color: transparent; 
+}
+.add_img{
+  width: 60rpx;
+  height: 60rpx; 
+  position: absolute;
+  right: 25rpx;
+  top: 15rpx;
+}
+.change_view{
+  background:transparent;
+  width: 600rpx;
+  height: 75rpx;
+  position: absolute;
+  bottom: 10rpx;
+  left: 0;
+}
+.change_btn{
+  position: relative; 
+  display: inline-block;
+  margin-right: 10rpx;
+  top: 5rpx;
+  width: 220rpx; 
+  height: 75rpx;
+  background:transparent;
+}
+.change_en{
+  position: relative;
+  bottom:0rpx;
+  font-size: 30rpx;
+}
+.change_ch{
+  position:relative;
+  left: 10rpx;
+  bottom:0rpx;
+  margin-right:15rpx;
+}
+.change_underline{
+  width: 65rpx; 
+  height: 50rpx; 
+  position: absolute; 
+  top:25rpx;
+}
+.output_view{
+  position:absolute;
+  left:0;
+  top:263rpx;
+}
+.output_btn{
+  display:block;
+  width: 750rpx;
+  height: 215rpx;
+  position: relative;
+  background-color:white;
+  font-weight: bold;
+  z-index: 1;
+}
+.tk_view{
+  position: absolute;
+  left:20rpx;
+  bottom:20rpx
+}
+.tk_back{
+  background:#8080802d;
+  display:inline-flex;
+  height:30rpx;
+  position:relative;
+  width: auto;
+  padding:0;
+  line-height:0rpx;
+  line-height:25rpx;
+  margin-right:10rpx;
+  border-radius: 10rpx;
+}
+.tk_txt{
+  position:relative;
+  font-weight: bold;
+  font-size: 25rpx; 
+  margin:0;
+  display:inline;
+  color:#4682B4;
+  font-style: italic;
+}
+.output_deadline{
+  position: absolute;
+  right: 25rpx;
+  top: 20rpx;
+  font-style: italic;
+  font-size: 25rpx;
+  color:darkgray;
+}
+.output_img{
+  position:absolute;
+  bottom:20rpx;
+  right:25rpx;
+  width:135rpx;
+  height:135rpx;
+  display:block;
+  border-radius:5%
+}
+.output_money1{
+  font-size: 30rpx; 
+  position: relative; 
+  color: #FD3F31; 
+  font-weight: bold;
+  margin-right: 0;
+  display: inline;
+  top:0rpx;
+  left: 0rpx;
+}
+.output_money2{
+  font-size: 40rpx; 
+  position: relative;
+  color: #FD3F31; 
+  font-weight: bold;
+  display: inline;
+}
+.output_money3{
+  margin-left: 2rpx;
+  font-size: 32rpx; 
+  position: relative;
+  color: #FD3F31; 
+  font-weight: bold;
+  display: inline;
+}
+.output_quick{
+  font-size: 23rpx;
+  position: relative;
+  width:auto;
+  height: 30rpx;
+  border-radius:10rpx;
+  line-height:25rpx;
+  margin-left: 20rpx;
+}
+.output_moneyview{
+  position: absolute;
+  top:10rpx;
+  left: 10rpx;
+}
+.output_getted{
+  position: absolute;
+  width:120rpx;
+  height:120rpx;
+  top:-20rpx;
+  right:0rpx;
+}
+.output_text{
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+  position:absolute;
+  top:65rpx;
+  left:20rpx;
+  font-size:35rpx;
+  width:560rpx;
+  text-align: left;
+}
+

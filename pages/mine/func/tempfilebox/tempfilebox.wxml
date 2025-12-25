@@ -1,0 +1,26 @@
+<view style="background:{{backcolor_theme[theme]}}"class="up_view">
+  <view bindtap="back" class="back_btn">
+    <image src="/resources/areaTag/back.png"class="back_img"></image>
+  </view>
+  <text class="menutext">草稿箱</text>
+</view>
+<!---------------以上为上方导航栏----------------->
+<text class="help_txt"style="display:{{isHelp?'inline':'none'}}">-草稿箱存在于您的缓存中，并且不存储标签与犬舍信息</text>
+<view class="help_btn"bindtap="showHelp">?</view>
+<!--------------以上为查看草稿箱详情------------------------>
+<view class="file_view">
+  <block wx:for="{{files}}" data-item="item" wx:for-index="index"wx:key="key">
+    <view class="file_card"id="{{index}}"bindtap="chooseFile">
+      <text class="file_txt">{{item.up_text}}</text>
+      <view disabled="false"class="time_btn">
+        <text decode="true" class="time">&nbsp;{{item.saveTime}}&nbsp;</text>
+      </view>
+    </view>
+    <view class="del_btn"bindtap="delFile"id="{{index}}">
+      <image src="https://7761-wang-user-3g88vo8a67000017-1314225073.tcb.qcloud.la/mine/resources/delete.png?sign=5b96633b10500bd7bc273f5dcbedd1f6&t=1671179282"class="del_img"/>
+    </view>
+  </block>
+</view>
+<!---------------以上为草稿列表----------------->
+
+

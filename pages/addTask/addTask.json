@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tags":"/pages/addTask/comp/tags/tags",
+    "kennels":"/pages/addTask/comp/kennels/kennels"
+  }
+}

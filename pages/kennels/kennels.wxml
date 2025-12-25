@@ -1,0 +1,37 @@
+<view class="up_view"style="background:{{back_color[theme]}}">
+  <text class="menutext">犬舍</text>
+</view>
+<view class="chosecard_view">
+  <image class="choseimg" src="/resources/areaTag/selected.png" style="left:{{choiceOrder*150+40}}rpx"></image>
+  <input class="choseinput" placeholder="输入关键字检索"placeholder-style="font-style:italic" maxlength="20"/>
+  <block wx:for="{{choices}}"wx:key="key">
+    <view class="chosecard"bindtap="change"id="{{index}}">
+      <text class="chosetxt">{{choices[index]}}</text>
+    </view>
+  </block>
+</view>
+<block wx:if="{{choiceOrder===0}}">
+  <view class="kennels_view">
+  <block wx:for="{{kennels}}"wx:key="key">
+    <view class="kennel">
+      <image class="kennel_img"src="{{kennels[index].src}}" mode="widthFix"></image>
+      <text class="kennel_txt">{{kennels[index].name}}<text class="kennel_condition"wx:if="{{kennels[index].condition}}"> (开放)</text>
+      </text>
+      <text class="kennel_quality">C/T: {{kennels[index].complain}}/{{kennels[index].task}}</text>
+    </view>
+  </block>
+  </view>
+</block>
+<block wx:else>
+
+  <view class="kennels_view">
+  <block wx:for="{{my_kennels}}"wx:key="key">
+    <view class="kennel">
+      <image class="kennel_img"src="cloud://wang-user-3g88vo8a67000017.7761-wang-user-3g88vo8a67000017-1314225073/{{my_kennels[index].src}}" mode="widthFix"></image>
+      <text class="kennel_txt">{{my_kennels[index].name}}<text class="kennel_condition"wx:if="{{my_kennels[index].condition}}"> (开放)</text>
+      </text>
+      <text class="kennel_quality">C/T: {{my_kennels[index].complain}}/{{my_kennels[index].task}}</text>
+    </view>
+  </block>
+  </view>
+</block>

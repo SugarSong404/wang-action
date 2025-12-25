@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "collector": "/pages/mine/comp/collector/collector",
+    "phone": "/pages/mine/comp/phone/phone",
+    "theme":"/pages/mine/comp/themeRadio/themeRadio"
+  }
+}

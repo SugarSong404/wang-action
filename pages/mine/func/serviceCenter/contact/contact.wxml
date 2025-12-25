@@ -1,0 +1,20 @@
+<image src="/resources/mine/resources/backlogin.png" style="width: 750rpx; height: 160rpx; display: inline-block; box-sizing: border-box; position: fixed; left: 0rpx; top: 0rpx"></image>
+
+<button bindtap="back" style="position: relative; left: -317rpx; top: 68rpx; width: 118rpx; height: 78rpx; display: block; box-sizing: border-box; border: none; background-color: transparent; z-index: 3"></button>
+<text class="otherFont" style="position: fixed; left: 290rpx; top: 71rpx">开发者名录</text>
+<image src="/resources/areaTag/back.png" style="width: 45rpx; height: 45rpx; position: fixed; left: 29rpx; top: 85rpx; z-index: 2"></image>
+
+<view style="position: absolute;top: 270rpx;width: 750rpx;display: block;">
+<view wx:for="{{nickNames}}"wx:key="key">
+<text style="position: absolute;background-color:#8080802d; font-size: 30rpx;left:20rpx;font-weight: bold;display: block;top: {{160*index+20}}rpx;">昵称:</text>
+<text style="position: absolute;background-color:  #8080802d; font-size: 30rpx;left:20rpx;font-weight: bold;display: block;top: {{160*index+90}}rpx;">微信号：</text>
+<text style="position: absolute; font-size: 30rpx;left:150rpx;font-weight: bold;display: block;top: {{160*index+90}}rpx;">{{vx[index]}}</text>
+<text style="position: absolute; font-size: 30rpx;left:100rpx;font-weight: bold;display: block;top: {{160*index+20}}rpx;">{{nickNames[index]}}</text>
+<button disabled="false"style="position:absolute;z-index:-1;width:750rpx;height:150rpx;top: {{160*index}}rpx;background:transparent;border-top:2rpx solid rgba(0, 0, 0, 0.137)"></button>
+<button style="background: rgba(245, 222, 179, 0.651);display: inline-flex;position:absolute;width:auto;height: 50rpx;left:630rpx;top:{{index*160+55}}rpx;border-top: 2rpx solid rgba(0, 0, 0, 0.137);border-radius:10;z-index: 2;padding: 0;border: none;"bindtap="copy"id="{{index}}">
+    <image src="/resources/mine/copy.png" style="position: relative;display: inline-block;top:0;left:0;width:45rpx;height: 45rpx;margin: 0;"></image>
+   </button>
+</view>
+</view>
+<text style="position: absolute; left: 12rpx; top: 185rpx; font-size: 50rpx; font-weight: bold">请</text>
+<text style="position: absolute; left: 70rpx; top: 210rpx; font-size: 30rpx;font-weight: bold;">添加下列开发者微信好友进行联系</text>

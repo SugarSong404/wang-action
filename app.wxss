@@ -1,0 +1,14 @@
+page{
+  background: rgba(236, 234, 234, 0.637);
+}
+.menutext{
+  display: block;
+  position: fixed;
+  top: 80rpx;
+  left: 0rpx;
+  width: 750rpx;
+  height: auto;
+  z-index: 2;
+  font-size: 35rpx;
+  text-align: center;
+}

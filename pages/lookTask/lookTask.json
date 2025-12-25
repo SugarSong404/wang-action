@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "choice":"/pages/lookTask/choice/choice"
+  }
+}

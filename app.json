@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/square/square",
+    "pages/mine/mine",
+    "pages/task/task",
+    "pages/kennels/kennels",
+    "pages/addTask/addTask",
+    "pages/lookTask/lookTask",
+    "pages/mine/comp/collector/collector",
+    "pages/mine/comp/phone/phone",
+    "pages/mine/comp/themeRadio/themeRadio",
+    "pages/mine/func/history/history",
+    "pages/mine/func/tempfilebox/tempfilebox",
+    "pages/mine/func/serviceCenter/complain/complain",
+    "pages/mine/func/serviceCenter/ruless/ruless",
+    "pages/mine/func/serviceCenter/contact/contact",
+    "pages/addTask/comp/tags/tags",
+    "pages/addTask/comp/kennels/kennels",
+    "pages/lookTask/choice/choice",
+    "cloudfunctions/getOpenID"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom",
+    "pageOrientation": "portrait",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 100
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/square/square",
+        "text": "广场",
+        "iconPath": "resources/square.png",
+        "selectedIconPath": "resources/square2.png"
+      },
+      {
+        "pagePath": "pages/task/task",
+        "text": "任务",
+        "iconPath": "resources/task.png",
+        "selectedIconPath": "resources/task2.png"
+      },
+      {
+        "pagePath": "pages/kennels/kennels",
+        "text": "犬舍",
+        "iconPath": "resources/kennels.png",
+        "selectedIconPath": "resources/kennels2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "resources/mine.png",
+        "selectedIconPath": "resources/mine2.png"
+      }
+    ],
+    "color": "#778899",
+    "selectedColor": "#4682B4",
+    "backgroundColor": "#F5F5F5",
+    "borderStyle": "black",
+    "position": "bottom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

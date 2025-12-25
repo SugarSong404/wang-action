@@ -1,0 +1,11 @@
+<view class="transView"bindtap="hide"/>
+<!------------------以上为透明遮罩区------------------->
+<view class="container">
+  <block wx:for="{{taskTxt}}"wx:key="key">
+    <view class="task"bindtap="getMethod"id="{{taskMethod[index]}}">
+      <image src="{{taskImg[index]}}"class="task_img"/>
+      <text class="task_txt">{{taskTxt[index]}}</text>
+    </view>
+  </block>
+</view>
+<!--------------以上为控件布局区--------------------->

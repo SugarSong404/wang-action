@@ -1,0 +1,66 @@
+<view class="background"style="top:0;height:160rpx">
+  <view bindtap="back"class="back_btn">取消</view>
+</view>
+<!---------------------以上为上方部分组件--------------------->
+<view class="background"style="top:170rpx;height:100rpx">
+  <image class="avatar" src="{{((current_openid!==down_openid)||(down_openid2===''||down_openid2===undefined))?userGet1.avatarUrl:userGet2.avatarUrl}}"mode="cover"></image>
+  <text class="nickname">{{((current_openid!==down_openid)||(down_openid2===''||down_openid2===undefined))?userGet1.nickName:userGet2.nickName}}</text>
+  <text class="usertxt">{{((current_openid!==down_openid)||(down_openid2===''||down_openid2===undefined))?'（发布）':'（接单）'}}</text>
+</view>
+<!---------------------以上为中间上部分组件------------------->
+<view class="background"style="top:280rpx;height:650rpx">
+  <text class="textarea"user-select="text">{{down_text}}</text>
+  <view class="photo_container">
+    <block wx:for="{{down_path}}"wx:key="key">
+      <view class="photo_view"id="{{index}}"bindtap="showBig"bindlongpress="delPhoto"style="background:white">
+        <image src="cloud://cloud1-4g0l9ohsd7c3aad1.636c-cloud1-4g0l9ohsd7c3aad1-1314225073/{{down_path_cover[index]===''?down_path[index]:down_path_cover[index]}}"class="path"mode="aspectFill"/>
+        <image src="{{down_path_cover[index]===''?'':'/resources/output/video.png'}}"class="path"/>
+      </view>
+    </block>
+  </view>
+  <view bindtap="getTask"class="task"wx:if="{{current_openid!==down_openid&&down_openid2!==current_openid}}">
+    <image src="/resources/lookTask/get.png"class="task_btn"/>
+    <text class="task_txt">接单</text>
+  </view>
+  <view bindtap="openChoice"class="choice_view"wx:else>
+    <image src="/resources/lookTask/choice.png"class="choice_img"/>
+  </view>
+</view>
+<!-------------以上为中间下部分组件--------------------->
+<view class="background"style="top:945rpx;height:160rpx">
+    <view class="show_picker">
+      <image src="/resources/output/money.png"class="show_img"/>
+      <text class="show_text">{{'赏金:￥'+down_moneyB+down_moneyS}}</text>
+    </view>
+    <view class="show_picker">
+      <image src="/resources/output/clock.png"class="show_img"style="opacity: 0.3"/>
+      <text class="show_text">{{'期限: '+format_deadline}}</text>
+    </view>
+</view>
+<!-------------以上为下方部分组件--------------------->
+<view class="under_view">
+  <switch disabled="false" class="quick"checked="{{down_quick}}">加急</switch>
+  <view class="tk_view">
+    <block wx:for="{{down_tags}}"data-item="item"wx:for-index="index"wx:key="key3">
+      <view class="tk_btn">
+      <text decode="true" class="tk_txt"style="color:{{tk_theme[theme]}}">&nbsp;#{{item.context}}&nbsp;</text>
+      </view>
+   </block>
+   <view class="tk_btn"wx:if="{{down_tags.length===0}}">
+      <text decode="true"class="tk_txt"style="color:{{tk_theme[theme]}}">&nbsp;#未选标签&nbsp;</text>
+    </view>
+  </view>
+  <view class="tk_view">
+    <block wx:for="{{down_kennels}}"data-item="item"wx:for-index="index"wx:key="key4">
+      <view class="tk_btn">
+      <text decode="true" class="tk_txt"style="color:{{tk_theme[theme]}}">&nbsp;*{{item.context}}&nbsp;</text>
+      </view>
+   </block>
+   <view class="tk_btn"wx:if="{{down_kennels.length===0}}">
+      <text decode="true" class="tk_txt"style="color:{{tk_theme[theme]}}">&nbsp;*未选犬舍&nbsp;</text>
+      </view>
+  </view>
+</view>
+<!----------以上为底部部位组件----------------------->
+<choice roles="{{current_openid===down_openid}}"class="choice"wx:if="{{!isChoiceHide}}"bind:get_choice="getChoice"bind:hide="openChoice"/>
+<!---------------以上为choice组件---------------------->

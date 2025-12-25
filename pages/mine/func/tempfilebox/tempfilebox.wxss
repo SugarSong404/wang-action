@@ -1,0 +1,125 @@
+.up_view{
+  width: 750rpx; 
+  height: 160rpx; 
+  display: block; 
+  position: fixed; 
+  left: 0rpx; 
+  top: 0rpx;
+  z-index: 2;
+}
+.back_btn{
+  position: absolute; 
+  left: 0rpx; 
+  top: 70rpx; 
+  width: 118rpx; 
+  height: 78rpx; 
+  display: block; 
+  background-color: transparent;
+  z-index: 4;
+}
+.back_img{
+  width: 45rpx;
+  height: 45rpx;
+  position: absolute; 
+  left:25rpx; 
+  top: 15rpx;
+  z-index: 3;
+}
+.file_view{
+  position: absolute;
+  top: 170rpx;
+  z-index:1;
+}
+.file_card{
+  background: transparent; 
+  display: inline-block;
+  position: relative;
+  width: 660rpx;
+  height: 160rpx;
+  left:45rpx;
+  border-top: 2rpx solid rgba(0, 0, 0, 0.137);
+}
+.file_txt{
+  position: absolute;
+  font-size: 37rpx;
+  top:30rpx;
+  left:0;
+  width:460rpx;
+  text-align: left;
+  font-weight: bold;
+  display:-webkit-box;
+  -webkit-line-clamp:1;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+}
+.time_btn{
+  border:none;
+  background:#8080802d;
+  display:inline-flex;
+  height:30rpx;
+  position:absolute;
+  z-index:2;
+  width: auto;
+  bottom:10rpx;
+  left:0rpx;
+  padding:0;
+  line-height:25rpx;
+  border-radius:10rpx;
+  font-weight: bold;
+}
+.time{
+  position: relative;
+  font-size:25rpx;
+  display:inline;
+  margin:0;
+  color: #808080fd; 
+  font-weight:lighter;
+}
+.del_btn{
+  background: rgba(245, 222, 179, 0.651);
+  display: inline-flex;
+  position: relative;
+  width:auto;
+  height: 50rpx;
+  right:50rpx;
+  top:-50rpx;
+  border-top: 2rpx solid rgba(0, 0, 0, 0.137);
+  border-radius:10;
+  padding: 0;
+  border: none;
+}
+.del_img{
+  position: relative;
+  display: inline-block;
+  top:0;
+  left:0;
+  width: 50rpx;
+  height: 50rpx;
+  margin:0;
+}
+.help_txt{
+  position: fixed;
+  top:140rpx;
+  background: bisque;
+  padding: 20rpx;
+  z-index: 2;
+  border-radius: 20rpx;
+  font-size: 30rpx;
+  left:20rpx;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.384);
+}
+.help_btn{
+  position: fixed;
+  border-radius: 100%;
+  width: 28rpx;
+  font-weight: bold;
+  border: 1rpx solid rgba(0, 0, 0, 0.61);
+  font-size: 23rpx;
+  text-align: center;
+  top:87rpx;
+  left: 440rpx;
+  z-index:2;
+}

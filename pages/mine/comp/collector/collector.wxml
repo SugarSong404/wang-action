@@ -1,0 +1,19 @@
+<view class="transView"bindtap="hide"/>
+<!-----------------------以上为透明遮盖区------------------->
+<view class="container">
+<form bindsubmit="formSubmit" class="noneForm">
+    <view class="collector_view">
+      <button open-type="chooseAvatar"bind:chooseavatar="onChooseAvatar" class="avatar_btn"style="width:90rpx;">
+      <image class="avatar_img" src="{{avatarUrl}}" ></image>
+      </button>
+      <input class="nicktext"name="nick" type="nickname" placeholder="请输入昵称" maxlength="16"placeholder-style="font-size:30rpx" cursor-spacing="100"style="top:5rpx;"/>
+      <text class="nicktext"style="top:60rpx;color:rgba(0, 0, 0, 0.377);font-size:30rpx">微信个人信息</text>
+  </view>
+  <button class="control_btn"form-type="submit"name="btn"style="width: 300rpx;background:#03C161;right:50rpx;color:white;">完成</button>
+</form>
+<button class="control_btn"style="width:300rpx;left:50rpx;background:#EDEDED;color:black"bindtap="hide"disable="true">取消</button>
+<image class="introimg"src="/resources/mine/defalut_head.png"></image>
+<text class='introtxt'>汪汪行动 申请</text>
+<text class='introtxt2'>获取你的头像与昵称信息</text>
+</view>
+<!-----------------------以上为数据收集区------------------->

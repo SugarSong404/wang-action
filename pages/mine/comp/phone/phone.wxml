@@ -1,0 +1,15 @@
+<view class="transView"bindtap="hide"/>
+<!-----------------------以上为透明遮盖区------------------->
+<view class="container">
+<image class="introimg"src="/resources/mine/defalut_head.png"></image>
+<text class='introtxt'>汪汪行动 申请</text>
+<text class='introtxt2'>{{phoneType}}你微信绑定的手机号</text>
+<button class="phonebtn"style="width: 700rpx;"open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+<text class="phonetxt"style="color:rgba(0, 0, 0, 0.377);">微信绑定号码</text>
+<text class="phonetxt"style="color:black">{{phone}}</text>
+<image src="/resources/ok.png"class="phoneimg"></image>
+</button>
+<button class="control_btn"style="width: 300rpx;background:#03C161;right:50rpx;color:white;"bindtap="submitPhone">确认</button>
+<button class="control_btn"style="width:300rpx;left:50rpx;background:#EDEDED;color:black"bindtap="hide">取消</button>
+</view>
+<!----------------------以上为数据收集区域------------------------->

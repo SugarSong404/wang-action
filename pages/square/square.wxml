@@ -1,0 +1,59 @@
+<wxs module="m1">
+  var getTime = function(date) {
+    var time = getDate(date);
+    var Mday= getDate(time.getFullYear(),time.getMonth()+1,0).getDate();
+    var y = time.getFullYear() 
+    var m = time.getMonth() + 1 
+    var d = time.getDate()
+    var h = time.getHours() 
+    var mm = time.getMinutes() 
+    if(h>23){h=h-24;d=d+1;if(d>Mday){d=1;m=m+1;if(m==13){m=1;y+1}}}
+    m = m < 10 ? ('0' + m) : m;d = d < 10 ? ('0' + d) : d;h=h < 10 ? ('0' + h) : h;mm = mm < 10 ? ('0' + mm) : mm;
+    return (y+'/'+m+'/'+d+'  '+h+':'+mm)
+}
+module.exports.getTime = getTime;
+</wxs>
+<!----------------布局一个时间计算函数-------------------->
+<view class="up_view"style="background:{{back_color[theme]}};">
+  <text class="menutext">广场</text>
+  <image src="{{hasUserInfo?userInfo.avatarUrl:'/resources/mine/defalut_head.png'}}"class="avatar"/>
+  <text class="nickname">{{hasUserInfo?userInfo.nickName+'，你好！':'您尚未登录！'}}</text>
+  <view class="search_view">
+    <view class="search_frame"style="border: 5rpx solid {{back_color[theme]}};">
+      <image src="/resources/areaTag/search.png"class="search_img"/>
+      <input class="search_input"placeholder="请输入您想搜索的内容"placeholder-style="font-size:28rpx;font-style:italic"/>
+      <view class="search_btn"style="background:{{back_color[theme]}};">搜索</view>
+    </view>
+    <view class="search_sift">
+      <image src="/resources/index/sift.png"class="sift_img"></image>
+    </view>
+  </view>
+</view>
+<!---------------以上为搜索栏等上部分板块的布局-------->
+<view wx:for="{{arr}}"wx:for-index="index"item-data="item" wx:key="key"class='output_view'>
+  <view style="top:{{index*230}}rpx" id="{{index}}"bindtap="{{hasUserInfo?'showDetail':'toLogin'}}"class="output_btn">
+    <view class="tk_view">
+     <view class="tk_back">
+      <text decode="true"class="tk_txt"style="color:{{tk_color[theme]}}">#{{item.tags.length===0?'未选标签':item.tags[0].context+(item.tags.length===1?'':'...')}}&nbsp;</text>
+     </view>
+    <view class="tk_back">
+      <text decode="true"class="tk_txt"style="color:{{tk_color[theme]}}">*{{item.kennels.length===0?'未选犬舍':item.kennels[0].context+(item.kennels.length===1?'':'...')}}&nbsp;</text>
+    </view>
+    </view>
+
+    <view class="output_moneyview">
+      <text class="output_money1">￥</text>
+      <text decode="true" class="output_money2">{{item.moneyB}}</text> 
+      <text decode="true" class="output_money3">{{item.moneyS}}</text>
+      <text decode="true" style="color: rgb(219, 219, 8);border:2rpx solid rgb(219, 219, 8);display:{{myArr[index].quick?'inline-flex':'none'}};"class="output_quick">&nbsp;加急&nbsp;</text>
+    </view>
+
+    <text class="output_text">{{item.text}}</text>
+    <text class="output_deadline">{{m1.getTime(item.deadline)}}</text>
+    <image 
+  src="{{(item.path_cover && item.path_cover[0]) || (item.path && item.path[0]) ? 'cloud://cloud1-4g0l9ohsd7c3aad1.636c-cloud1-4g0l9ohsd7c3aad1-1314225073/' + ((item.path_cover && item.path_cover[0]) || (item.path && item.path[0])) : '/resources/output/default.png'}}"
+  class="output_img"
+/>
+  </view>
+  </view>
+  <!-----------------以上为任务列表部分模块-------------->

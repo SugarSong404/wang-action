@@ -1,0 +1,105 @@
+.up_view{
+  position: fixed;
+  width: 100%;
+  height: 150rpx;
+  z-index: 3;
+  border-radius: 0 0 40rpx 40rpx;
+}
+.chosecard_view{
+  z-index: 2;
+  position: fixed;
+  width: 750rpx;
+  background: white;
+  top: 120rpx;
+  height: 135rpx;
+}
+.chosecard{
+  position: relative;
+  left: 30rpx;
+  top: 50rpx;
+  width: auto;
+  display: inline-block;
+  height: 60rpx;
+  margin-right: 40rpx;
+}
+.chosetxt{
+  position: relative;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.choseimg{
+  position: absolute;
+  width: 80rpx;
+  height: 100rpx;
+  top: 35rpx;
+}
+.choseinput{
+  position: absolute;
+  right: 25rpx;
+  padding-left:15rpx;
+  padding-right: 15rpx;
+  font-size: 28rpx;
+  top: 55rpx;
+  border-radius: 20rpx;
+  width: 350rpx;
+  height: 30rpx;
+  background: rgba(114, 111, 111, 0.178);
+}
+.kennels_view{
+  position: absolute;
+  top: 265rpx;
+  left: 30rpx;
+  width: 690rpx;
+  height: auto;
+  column-count: 3;
+  -webkit-column-count: 3;
+  column-gap:10rpx;
+}
+.kennel{
+  height: auto;
+  -webkit-column-break-inside: avoid;
+  position: relative;
+  display: inline-block;
+  width: 225rpx;
+  border-radius: 10rpx;
+  background: rgba(255, 255, 255, 0.637);
+  margin-bottom: 15rpx;
+}
+.kennel_img{
+  position: relative;
+  display: block;
+  left: 0rpx;
+  top: 0rpx;
+  width: 225rpx;
+  border-radius: 10rpx 10rpx 0 0;
+  min-height: 200rpx;
+}
+.kennel_txt{
+  display: -webkit-box;
+  position: relative;
+  -webkit-line-clamp:3;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  width: 210rpx;
+  left: 10rpx;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.692);
+}
+.kennel_condition{
+  position: relative;
+  font-size: 25rpx;
+  color: rgb(231, 198, 8);
+  word-break:keep-all;
+}
+.kennel_quality{
+  position: relative;
+  top: -10rpx;
+  left: 10rpx;
+  font-style: italic;
+  font-size: 25rpx;
+  color:darkgray;
+}

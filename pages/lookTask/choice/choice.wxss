@@ -1,0 +1,42 @@
+.container{
+  background: white;
+  position: fixed;
+  top: 630rpx;
+  right: 20rpx;
+  width: 160rpx;
+  height: auto;
+  border-radius: 20rpx;
+  border: 1rpx solid wheat;
+}
+.task{
+  width: 150rpx;
+  height: 60rpx;
+  display: block;
+  position: relative;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.task_img{
+  width: 45rpx; 
+  height: 45rpx; 
+  display: block;
+  left: 10rpx; 
+  top: 10rpx; 
+  position: absolute;
+}
+.task_txt{
+  color: #a84845;
+  position: absolute; 
+  left: 75rpx; 
+  top: 5rpx;
+}
+.transView{
+  position: fixed;
+  width: 750rpx;
+  height: 100%;
+  bottom: 0rpx;
+  left: 0rpx;
+  background: rgba(0, 0, 0, 0.253);
+}

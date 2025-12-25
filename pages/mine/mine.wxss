@@ -1,0 +1,76 @@
+.backlogin{
+  position: fixed;
+  height: 340rpx;
+  width: 750rpx;
+  z-index: 1;
+  display:block;
+}
+.avatar{
+  position: absolute ;
+  display: block;
+  height: 110rpx;
+  width: 110rpx;
+  top: 180rpx;
+  left: 50rpx;
+  border-radius:100%;
+}
+.nickname{
+  position: absolute; 
+  left: 235rpx;
+  top: 180rpx;
+  font-size: 40rpx;
+}
+.littletxt{
+  display: inline;
+  margin-right: 10rpx;
+  font-size: 26rpx;
+}
+.littleout{
+  top: 230rpx;
+  left: 235rpx;
+  position: absolute;
+}
+.collector{
+  position: fixed; 
+  z-index: 2;
+  left: 0rpx; 
+  bottom: 0rpx;
+  width: 750rpx;
+  height: 450rpx;
+}
+.phone{
+  position: fixed;
+  z-index: 2;
+  bottom:450rpx;
+}
+.theme{
+  position:fixed;
+  z-index:2;
+}
+.choosecard{
+  background:white;
+  display:block;
+  border-radius: 0;
+  margin-bottom: 1rpx; 
+  position:relative; 
+  box-sizing: border-box;
+  height: 90rpx;}
+.choosecardtext{
+  position:absolute;z-index: 1;font-size: 30rpx;left:85rpx;top: 25rpx;
+}
+.choosecardimage{
+  position:absolute;z-index: 1;width: 45rpx;height: 45rpx;top: 25rpx;left: 15rpx;
+  font-weight:lighter
+}
+.chooseview{
+  display:block;
+  position:relative;
+  margin-bottom: 20rpx;
+}
+.choose_container{
+  position: absolute;
+  top:360rpx;
+  left: 0rpx;
+  z-index: 1;
+  display: block;
+}

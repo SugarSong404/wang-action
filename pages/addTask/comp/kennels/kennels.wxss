@@ -1,0 +1,114 @@
+.container{
+  width: 750rpx;
+  height: 1000rpx;
+  position: fixed;
+  bottom: 0;
+  background: white;
+}
+.kennels_container{
+  position: absolute;
+  width: 700rpx;
+  height: 700rpx;
+  left: 25rpx;
+  top: 200rpx;
+}
+.choosecard{
+  position: relative;
+  width: 700rpx;
+  height: 120rpx;
+  margin-bottom: 10rpx;
+  border-radius:35rpx;
+  background: rgba(245, 222, 179, 0.315);
+}
+.choosecardtxt{
+  font-size: 30rpx;
+  position: absolute;
+  display: inline;
+  top: 40rpx;
+  left: 140rpx;
+  font-weight: bold;
+}
+.chooseornot_img{
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  position: absolute;
+  right: 10rpx;
+  top: 40rpx
+}
+.choosecardimg{
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  left:20rpx;
+  top: 25rpx;
+}
+.func_container{
+  width: 750rpx;
+  height: 180rpx;
+  left: 0;
+  top: 0;
+  position: static;
+}
+.ok_btn{
+  position: absolute;
+  top: 920rpx;
+  font-size: 35rpx;
+  font-style: italic;
+  color: rgba(0, 128, 0, 0.685);
+  right: 50rpx;
+  background: wheat;
+  padding: 1rpx;
+  border-radius: 15rpx;
+}
+.no_btn{
+  width: 40rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  right: 10rpx;
+  text-align: center;
+  top: 10rpx;
+  border-radius: 100%;
+  position: absolute;
+  background: rgba(0, 0, 255, 0.103);
+  background: rgba(0, 0, 255, 0.055);
+}
+.content_view{
+  width: 680rpx;
+  left: 20rpx;
+  top: 5rpx;
+  position: relative;
+  height: 120rpx;
+}
+.introtxt{
+  position: relative;
+  font-size: 30rpx;
+  top: 0;
+  left: 0;
+}
+.content_btn{
+  margin-right:5rpx;
+  border:none;
+  border-radius: 15rpx;
+  background:#8080804d;
+  display:inline-flex;
+  height:35rpx;
+  position:relative;
+  line-height: 35rpx;
+  padding:0;
+  width: auto;
+}
+.content_txt{
+  font-style:italic;
+  font-size:26rpx;
+  color: #4682B4;
+  display:inline
+}
+.transView{
+  position: fixed;
+  width: 750rpx;
+  height: 100%;
+  bottom: 0rpx;
+  left: 0rpx;
+  background: rgba(0, 0, 0, 0.253);
+}

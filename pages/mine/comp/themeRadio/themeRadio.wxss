@@ -1,0 +1,40 @@
+.container{
+  position: fixed;
+  width: 250rpx;
+  height: auto;
+  top: 200rpx;
+  right: 20rpx;
+  background-color: white;
+  border-radius: 20rpx;
+}
+.radioView{
+  height: 40rpx;
+  width:40rpx;
+  position: relative;
+  margin: 10rpx;
+  display: inline-block;
+  border-radius: 10rpx;
+}
+.radioImg{
+  height: 30rpx;
+  width: 30rpx;
+  position: absolute;
+  top: 5rpx;
+  left: 8rpx;
+}
+.transView{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.253);
+}
+.introtxt{
+  font-size: 25rpx;
+  font-weight: bold;
+  position: relative;
+  left: 10rpx;
+  color: rgba(0, 0, 0, 0.466) ;
+  display: block;
+}

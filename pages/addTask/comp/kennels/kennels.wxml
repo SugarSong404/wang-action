@@ -1,0 +1,26 @@
+<view class="transView"bindtap="hide"/>
+<!-----------------------以上为透明遮盖区------------------->
+<view class="container">
+<scroll-view class="kennels_container"scroll-y="true">
+  <block wx:for="{{kennels}}"wx:key="key">
+    <view class="choosecard"bindtap="choose"id="{{index}}">
+      <text class="choosecardtxt">*{{kennels[index].context}}</text>
+      <image src="{{kennels[index].img}}"class="choosecardimg"/>
+      <image class="chooseornot_img"src="{{content[0]&&content[0].context===kennels[index].context||content[1]&&content[1].context===kennels[index].context||content[2]&&content[2].context===kennels[index].context?'/resources/ok.png':''}}"/>
+      <image src=""class="choosecardkind_img"/>
+    </view>
+  </block>
+</scroll-view>
+<!--------------------------以上为标签库------------------------>
+<view class="content_view">
+  <text class="introtxt">选择犬舍：</text>
+  <block wx:for="{{content}}" data-item="item" wx:key="key2"wx:for-index="index">
+    <view class="content_btn"bindtap="delKennel" id="{{index}}">
+     <text decode="true" class="content_txt">&nbsp;*{{item.context}}&nbsp;</text>
+    </view>
+  </block>
+</view>
+<!----------------------以上为选择的标签---------------------->
+  <view class="no_btn"bindtap="hide">x</view>
+  <view class="ok_btn"bindtap="finish">确认></view>
+</view>

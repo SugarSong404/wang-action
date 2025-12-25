@@ -1,0 +1,69 @@
+<view class="background"style="top:0;height:160rpx">
+  <view bindtap="back"class="back_btn">取消</view>
+</view>
+<!---------------------以上为上方部分组件--------------------->
+<view class="background"style="top:165rpx;height:765rpx">
+  <textarea class="textarea"placeholder="请输入任务内容..."maxlength='900'bindinput="inputText"value="{{up_text}}"></textarea>
+
+  <view class="photo_container">
+    <block wx:for="{{show_path}}"wx:key="key">
+      <view class="photo_view"id="{{index}}"bindtap="showBig"bindlongpress="delPhoto"style="background:white">
+        <image src="{{show_path_cover[index]===''?show_path[index]:show_path_cover[index]}}"class="path"mode="aspectFill"/>
+        <image src="{{show_path_cover[index]===''?'':'/resources/output/video.png'}}"class="path"/>
+      </view>
+    </block>
+    <view class="photo_view"bindtap="choosePhoto"wx:if="{{show_path.length<2}}">
+      <text class="photo_text">照片/视频</text>
+      <image class="photo_img"src="/resources/output/photo.png"/>
+    </view>
+  </view>
+
+  <view class="out"bindtap="outputTask">
+    <image src="/resources/output/out.png"class="out_btn"/>
+    <text class="out_txt">发布</text>
+  </view>
+</view>
+<!-------------以上为中间部分组件--------------------->
+<view class="background"style="top:945rpx;height:160rpx">
+    <picker mode="multiSelector"range="{{moneyArr}}"bindchange="moneyCha"class="show_picker">
+      <image src="/resources/output/money.png"class="show_img"/>
+      <text class="show_text">{{moneyShow}}</text>
+    </picker>
+
+    <picker mode="multiSelector"range="{{timeArr}}"bindchange="timeCha"class="show_picker">
+      <image src="/resources/output/clock.png"class="show_img"style="opacity: 0.3"/>
+      <text class="show_text">{{timeShow}}</text>
+    </picker>
+</view>
+<!-------------以上为下方部分组件--------------------->
+<view class="under_view">
+  <switch class="quick"bindchange="quick"checked="{{up_quick}}">加急</switch>
+
+  <view class="tk_view">
+    <block wx:for="{{up_tags}}"data-item="item"wx:for-index="index"wx:key="key3">
+      <view class="tk_btn"bindtap="delTag" id="{{index}}">
+      <text decode="true" class="tk_txt"style="color:{{tk_theme[theme]}}">&nbsp;#{{item.context}}&nbsp;</text>
+      </view>
+   </block>
+    <view class="tk_btn" style="display:{{up_tags.length<3?'inline-flex':'none'}};"bindtap="setTag">
+      <image src="/resources/output/tag1.png" class="tk_img"/>
+      <text decode="true" class="tk_txt"style="color:black">添加标签&nbsp;</text>
+    </view>
+  </view>
+
+  <view class="tk_view">
+    <block wx:for="{{up_kennels}}"data-item="item"wx:for-index="index"wx:key="key4">
+      <view class="tk_btn"bindtap="delKennel" id="{{index}}">
+      <text decode="true" class="tk_txt"style="color:{{tk_theme[theme]}}">&nbsp;*{{item.context}}&nbsp;</text>
+      </view>
+   </block>
+    <view class="tk_btn" style="display:{{up_kennels.length<2?'inline-flex':'none'}};"bindtap="setKennel">
+      <image src="/resources/output/foot1.png" class="tk_img"/>
+      <text decode="true" class="tk_txt"style="color:black">添加犬舍&nbsp;</text>
+    </view>
+  </view>
+</view>
+<!----------以上为底部部位组件----------------------->
+<tags contents="{{up_tags}}"class="tag"bind:get_tags="setTag2"bind:hide="hideTag"wx:if="{{!isTagHide}}"/>
+<kennels contents="{{up_kennels}}"class="kennel"bind:get_kennels="setKennel2"bind:hide="hideKennel"wx:if="{{!isKennelHide}}"/>
+<!-------------------以上为tags与kennels组件----------------->

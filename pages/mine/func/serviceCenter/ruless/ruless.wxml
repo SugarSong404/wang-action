@@ -1,0 +1,6 @@
+<textarea style="width: 710rpx; height: auto; display: block; box-sizing: border-box; left: 20rpx; top: 200rpx;font-size:30rpx" disabled="false">此处展示协议与公示</textarea>
+
+<image src="/resources/mine/backlogin.png" style="width: 750rpx; height: 160rpx; display: inline-block; box-sizing: border-box; position: fixed; left: 0rpx; top: 0rpx"></image>
+<button bindtap="back" style="position: relative; left: -317rpx; top: 19rpx; width: 118rpx; height: 78rpx; display: block; box-sizing: border-box; border: none; background-color: transparent; z-index: 3"></button>
+<text class="otherFont" style="position: fixed; left: 290rpx; top: 71rpx">协议与公示</text>
+<image src="/resources/areaTag/back.png" style="width: 45rpx; height: 45rpx; position: fixed; left: 29rpx; top: 85rpx; z-index: 2"></image>

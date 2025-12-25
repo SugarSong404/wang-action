@@ -1,0 +1,57 @@
+<text name="mine" class="menutext">我的</text>
+<!----------------以上为"我的"字样--------------------->
+<view name="backlogin"class="backlogin"style="background:{{backLogin_theme[theme]}}"bindtap="{{method}}">
+  <block wx:if="{{hasUserInfo}}">
+    <image name="avatar"class="avatar"src="{{userInfo.avatarUrl}}"></image>
+    <text name="nickname"class="nickname">{{userInfo.nickName}}</text>
+    <view class="littleout">
+      <text name="honest"class="littletxt">诚信 {{userInfo.honest}}</text>
+      <text name="divide"class="littletxt"> | </text>
+      <text name="kennels"class="littletxt">犬舍 {{userInfo.kennels.length}}</text>
+    </view>
+  </block>
+  <block wx:else>
+    <image name="de_avatar"class="avatar"src="/resources/mine/defalut_head.png"></image>
+    <text name="de_nick"class="nickname">用户未登录</text>
+    <view class="littleout">
+      <text class="littletxt">点击进行登录</text>
+    </view>
+  </block>
+</view>
+<!----------------以上为蓝色背景板块内元素的布局--------------------->
+<collector wx:if="{{!isCollectorHide}}" class="collector"bind:get_user="getCollector"bind:hide="hideCollector"/>
+<phone wx:if="{{!isPhoneHide}}"class="phone"bind:get_phone="getPhone"bind:hide="hidePhone"phoneTypes="{{(method==='register')?'获取':(method==='login'?'验证':'变更')}}"></phone>
+<theme wx:if="{{!isThemeHide}}"class="theme" bind:hide="hideTheme"bind:get_theme="getTheme"></theme>
+<!-----------------以上为头像昵称组件与手机号授权与主题修改组件------------------------->
+<view wx:if="{{hasUserInfo}}">
+  <view class="choose_container">
+    <view class="chooseview">
+      <block wx:for="{{centerList}}" wx:key="key">
+        <button class="choosecard" method="{{centerMethod[index]}}"style="width: 750rpx;"bindtap="{{centerMethod[index]}}">
+        <text class="choosecardtext"style="">{{centerList[index]}}</text>
+        <image src="{{centerImg[index]}}"class="choosecardimage">
+        </image>
+        </button>
+      </block>
+    </view>
+    <view class="chooseview">
+      <block wx:for="{{otherList}}" wx:key="key2">
+        <button class="choosecard" method="{{otherMethod[index]}}"style="width: 750rpx;"bindtap="{{otherMethod[index]}}">
+        <text class="choosecardtext"style="">{{otherList[index]}}</text>
+        <image src="{{otherImg[index]}}"class="choosecardimage">
+        </image>
+        </button>
+        </block>
+    </view>
+    <view class="chooseview">
+      <block wx:for="{{globalList}}" wx:key="key3">
+        <button class="choosecard" method="{{globalMethod[index]}}"style="width: 750rpx;"bindtap="{{globalMethod[index]}}">
+        <text class="choosecardtext"style="">{{globalList[index]}}</text>
+        <image src="{{globalImg[index]}}"class="choosecardimage">
+        </image>
+        </button>
+      </block>
+    </view>
+  </view>
+</view>
+<!-----------------------以上为功能菜单区域------------------->

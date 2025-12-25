@@ -1,0 +1,12 @@
+<view class="transView"bindtap="hide"></view>
+<!--------------------以上为透明遮罩区---------------------->
+<view class="container">
+  <text class="introtxt">请选择主题</text>
+  <block wx:for="{{themeList}}"wx:key="key">
+    <view class="radioView"style="background:{{themeList[index]}};border:1rpx solid {{(index===theme)?themeList[index]:'none'}}"bindtap='chooseIt'id="{{index}}"></view>
+  </block>
+  <view class="radioView"style="border:1rpx solid wheat"bindtap="submitTheme">
+    <image src="/resources/ok.png"class="radioImg"></image>
+  </view>
+</view>
+<!---------------------以上为资料收集区------------>
